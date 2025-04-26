@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="\static\style.css">
+    <script src="\static\index.js"></script>
+    <script src="https://kit.fontawesome.com/f2ae13f1ba.js" crossorigin="anonymous"></script>
+    <style>
+        .button-link{
+        display:flex;
+        
+    }
+    .button-link a{
+        margin-left:10px;
+    }
+    .msg{
+        color:red;
+        padding-left:10px;
+        padding-bottom:6px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <label class="logo" style="color: rgb(226, 216, 216);">Crop & Fertilizer Recommendation System</label>
+        </nav>
+    </header>
+    
+   
+    <div class="popup-form">
+        <div class="formbox login">
+            <div class="form-detail">
+                <h2>welcome back</h2>
+                <p>please login in your personal information to stay connected with us.</p>
+            </div>
+            <div class="form-content">
+                <form method="POST" action="/register">
+                    <h2>SIGNUP</h2>
+                    <div class="input-field"><input type="text" name="username" required></div>
+                    
+                    <div class="input-field"><input type="password" name="password" required></div>
+                
+                    <button type="submit">Sign up</button>
+                </form>
+                <div class="msg"> {% if message %}
+                    <p>{{ message }}</p>
+                {% endif %} </div>
+                <div class="button-link">
+                    <p>Already have an account?</p>
+                    <a href="/login" id="signup-link">login</a>
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

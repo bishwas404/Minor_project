@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/style1.css">
+    <script src="https://kit.fontawesome.com/f2ae13f1ba.js" crossorigin="anonymous"></script>
+
+    <title>Recommendation System</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        background-color: rgb(254, 254, 254);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      }
+      nav ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      nav li {
+        height: 50px;
+      }
+      nav a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+      }
+      nav a:hover {
+        background-color: #f0f0f0;
+      }
+      nav li:first-child {
+        margin-right: auto;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .sidebar li {
+        width: 100%;
+      }
+      .sidebar a {
+        width: 100%;
+      }
+      .menu-button {
+        display: none;
+      }
+      @media (max-width: 800px) {
+        .hideOnMobile {
+          display: none;
+        }
+        .menu-button {
+          display: block;
+        }
+      }
+      @media (max-width: 400px) {
+        .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+        sidebar.style.zIndex = "999"; 
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+
+  </head>
+  <header>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="burgerIcon1.svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+            >
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="/homepage">Home</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/Dashboard">Dashboard</a></li>
+        <!-- <li><a href="#">About Us</a></li> -->
+      </ul>
+      <ul>
+        <li><a href="#">Crop & Fertilizer Recommendation System</a></li>
+        <li class="hideOnMobile"><a href="/homepage">Home</a></li>
+        <li class="hideOnMobile"><a href="/logout">Logout</a></li>
+        <li class="hideOnMobile"><a href="/dashboard">Dashboard</a></li>
+        <!-- <li class="hideOnMobile"><a href="#">About</a></li> -->
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="burgerIcon.svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+            >
+              <path
+                d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+ </header>
+  <body>
+    <div class="container">
+      <h1>Crop & Fertilizer Recommendation System</h1>
+      <form action="/predict" method="POST">
+        <label for="Nitrogen">Nitrogen</label>
+        <input
+          type="number"
+          id="Nitrogen"
+          name="Nitrogen"
+          placeholder="Enter Nitrogen"
+          required
+        />
+  
+        <label for="Phosporus">Phosphorus</label>
+        <input
+          type="number"
+          id="Phosporus"
+          name="Phosporus"
+          placeholder="Enter Phosphorus"
+          required
+        />
+  
+        <label for="Potassium">Potassium</label>
+        <input
+          type="number"
+          id="Potassium"
+          name="Potassium"
+          placeholder="Enter Potassium"
+          required
+        />
+  
+        <label for="Temperature">Temperature</label>
+        <input
+          type="number"
+          step="0.01"
+          id="Temperature"
+          name="Temperature"
+          placeholder="Enter Temperature in °C"
+          min="0"
+          max="60"
+          required
+        />
+  
+        <label for="Humidity">Humidity</label>
+        <input
+          type="number"
+          step="0.01"
+          id="Humidity"
+          name="Humidity"
+          placeholder="Enter Humidity in %"
+          required
+        />
+  
+        <label for="pH">pH</label>
+        <input
+          type="number"
+          step="0.01"
+          id="Ph"
+          name="Ph"
+          placeholder="Enter pH value"
+          required
+        />
+  
+        <label for="Rainfall">Rainfall</label>
+        <input
+          type="number"
+          step="0.01"
+          id="Rainfall"
+          name="Rainfall"
+          placeholder="Enter Rainfall in mm"
+          required
+        />
+  
+        <label for="Soil_color">Soil Color</label>
+        <input
+          type="text"
+          list="browsers"
+          id="Soil_color"
+          name="Soil_color"
+          placeholder="Enter color of soil"
+          
+          required
+        /><datalist id="browsers">
+          <option value="Red">
+          <option value="Dark Brown">
+          <option value="Medium Brown">
+          <option value="Black">
+          <option value="Light Brown">
+        </datalist>
+        <div class="two_buttons">
+          <button type="submit" name="action" class="crop_btn" value="crop">Get Crop Recommendation</button>
+          <button type="submit" name="action" class="fertilizer_btn" value="fertilizer">Get Fertilizer Recommendation</button>
+        </div>
+
+      </form>
+      </form>
+
+      {% if crop_result %}
+      <div class="output">
+        <h5>Recommend Crop for cultivation is:</h5>
+        <p><i><b>{{ crop_result }}</b></i></p>
+      </div>
+      {% endif %}
+
+      {% if fertilizer_result %}
+      <div class="output">
+        <h5>Recommended Fertilizer to fulfil deficiency:</h5>
+        <p><i><b>{{ fertilizer_result }}</b></i></p>
+      </div>
+      {% endif %}
+
+      {% if error %}
+      <div class="error">
+        <p>{{ error }}</p>
+      </div>
+      {% endif %}
+    
+  </body>
+</html>

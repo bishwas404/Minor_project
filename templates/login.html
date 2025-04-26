@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="\static\style.css">
+    <link rel="stylesheet" href="\static\styles.css">
+    <script src="\static\script.js" defer></script>
+
+    <script src="https://kit.fontawesome.com/f2ae13f1ba.js" crossorigin="anonymous"></script>
+<style>
+    .login-btn{
+        width:200px;
+    }
+    h2{
+        color:black;
+    }
+    p{
+        color:#0400d4;
+    }
+    .button-link{
+        display:flex;
+        
+    }
+    .button-link a{
+        margin-left:10px;
+    }
+</style>
+</head>
+<body>
+        <header>
+            <nav> 
+                <label class="logo" style="color: rgb(226, 216, 216);">Crop & Fertilizer Recommendation System</label>
+               
+            </nav>
+        </header>
+        <div class="popup-form">
+            <div class="formbox login">
+                <div class="form-detail">
+                  
+                </div>
+                <div class="form-content">
+                    <form method="POST" action="/login">
+                        <h2>LOGIN</h2>
+                        <div class="input-field"><input type="text" name="username" required></div>
+                        
+                        <div class="input-field"><input type="password" name="password" required></div>
+                        
+                        <a href="/forget_password" class="forgot-password">forgot password?</a>
+                        <button type="submit">Login</button>
+                    </form>
+                    <div class="button-link">
+                        <p>Don't have an account?</p>
+                        <a href="/register" id="signup-link">signup</a>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+</body>
+</html>

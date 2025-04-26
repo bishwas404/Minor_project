@@ -1,0 +1,174 @@
+.main{
+    position:relative;
+    height:500px;
+    
+    }
+    .container {
+        margin-top:20px;
+        width: 100%;
+        align-items: center;
+        height: 85vh;
+        max-width: 550px;
+        background-color: #fff;
+        padding: 20px;
+        background: transparent;
+        border-radius: 20px;
+        border: solid;
+        border-width: 2px;
+        border-color: rgba(257, 257, 257, 7);
+        backdrop-filter: blur(20px);
+        z-index: auto;
+        position:absolute;
+        left:470px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      
+      .container label {
+        display: inline-block;
+        width: 200px;
+        margin-bottom: 5px;
+      }
+      
+      input[type="number"],
+      input[type="text"] {
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+      
+      .recommendation_btn {
+        width: 40%;
+        display: block;
+        background-color: #4caf50;
+        color: white;
+        padding: -3px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 30%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .result {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      
+      .result h5 {
+        margin-top: 0;
+      }
+      .output {
+        color: white;
+      }
+      .two_buttons{
+        margin-left: 50px;
+        margin-top:30px;
+      }
+      .crop_btn{
+        background-color:rgb(10, 188, 10);
+        width:200px;
+        height:40px;
+        margin-right:10px;
+      }
+      .fertilizer_btn{
+        background-color:rgb(10, 188, 10);
+        width:200px;
+        height:40px;
+      }
+      .crop_btn:hover{
+        background-color: #11e018;
+        cursor:pointer;
+      
+      }
+      .fertilizer_btn:hover{
+        background-color: #11e018;
+        cursor:pointer;
+      }
+    
+      .output{
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 25px;
+        color:#f7f6f6;
+      }
+      @media (max-width: 858px) {
+        .recommendation_btn {
+          margin-left: 38%;
+          width: 200px;
+        }
+        .crop_btn{
+          width:153px;
+        }
+        .fertilizer_btn{
+          width:153px;
+        }
+        .logos {
+          display: none;
+        }
+        .container{
+            left:-10px; 
+           width:80%;
+           margin-left:30px;
+           height:90vh;
+           
+    
+        }
+        h1{
+            display:none;
+        }
+        input[type="number"],
+      input[type="text"] {
+        width: 300px;}
+    
+          button .crop_btn{
+           
+            width:40px;
+            height:40px;
+            margin-bottom: 10px;
+            /* margin-left:0px; */
+          }
+          button .fertilizer_btn{
+            background-color:rgb(10, 188, 10);
+            width:40px;
+            height:40px;
+          }
+          .two_buttons{
+            margin-left:0px;
+            margin-top:0px;
+            width:500px;
+            
+          }
+          .main{
+            width:500px;
+          }
+          .output{
+            margin-left: 50px;
+            margin-top: 20px;
+            font-size: 20px;
+            color:#f7f6f6;
+          }
+      }
+      body {
+        font-family: sans-serif;
+        /* background-color: #f5f5f5; */
+         /* padding: 20px;
+        display: flex;  */
+        /* align-items: center; */
+         /* justify-content: center;  */
+        background-image: url("green.jpg");
+        background-size:cover;
+        
+    
+      }

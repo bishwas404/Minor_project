@@ -1,0 +1,401 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 380px;
+  width: 100%;
+  height: 106vh;
+  max-width: 550px;
+  background-color: #fff;
+  padding: 20px;
+  background: transparent;
+  border-radius: 20px;
+  border: solid;
+  border-width: 2px;
+  border-color: rgba(257, 257, 257, 7);
+  backdrop-filter: blur(20px);
+  z-index: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.container label {
+  display: inline-block;
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.recommendation_btn {
+  width: 40%;
+  display: block;
+  background-color: #4caf50;
+  color: white;
+  padding: -3px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 30%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.result h5 {
+  margin-top: 0;
+}
+.output {
+  color: white;
+}
+@media (max-width: 858px) {
+  .recommendation_btn {
+    margin-left: 38%;
+    width: 200px;
+  }
+  .logos {
+    display: none;
+  }
+}
+/* ========================================================styled.css============================================================= */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+nav {
+  height: 86px;
+  width: 100%;
+  background-color: transparent;
+}
+label.logo {
+  color: rgb(14, 3, 29);
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0px 50px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  margin-right: 10px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  /* this makes the texts to be at the center of the nav height */
+  margin: 0px 5px;
+}
+nav ul li a {
+  color: rgba(246, 246, 246, 0.652);
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 9px;
+}
+a.active,
+a:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: #a10f0f;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+    text-align: center;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    /* the unordered list will be shifted out of page and will not be seen */
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 10000;
+  }
+  label.logo {
+    font-size: 25px;
+    padding: 5px;
+    text-align: center;
+    line-height: 70px;
+  }
+  nav ul li {
+    display: block;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    /* when the check button is checked the unordered list will be appeared */
+  }
+}
+
+.logout {
+  width: 80px; /* Adjust width as needed */
+  height: 30px; /* Adjust height as needed */
+  padding-bottom: 30px;
+}
+/* =============================================styles.css===================================================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  height: 60vh;
+  width: 100%;
+  background: url("green.jpg");
+  background-size: cover;
+}
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0 10px;
+}
+.logo {
+  font-size: 40px;
+  color: #fff;
+}
+.navigate {
+  display: flex;
+  /* arranges the elements inside the navigate class in horizontal manner */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 2px;
+  padding: 12px 0px;
+}
+.navigate .links {
+  display: flex;
+  /* display all the links elements in horizontal flex order */
+  list-style-type: none;
+  text-decoration: none;
+  gap: 35px;
+  margin: 0px 20%;
+}
+.navigate .links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #0400d4;
+}
+.navigate .login-btn {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(12, 91, 30);
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 3px;
+  background: #fff;
+}
+.popup-form {
+  margin-top: 312px;
+  margin-left: 65px;
+  background: #fff;
+
+  border: 2px solid #fff;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 10px 5px 10px rgba(0, 0.4, 0.4, 0.4);
+  pointer-events: none;
+}
+.popup-form .formbox {
+  display: flex;
+}
+.formbox .form-detail {
+  max-width: 330px;
+  /* doesnot extends this width even if the viewport is larger */
+  width: 100%;
+  color: rgba(0, 0, 0, 0);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url("environ.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.formbox .form-content {
+  width: 100%;
+  padding: 35px;
+  pointer-events: auto;
+}
+form .input-field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  /* position:relative; */
+}
+form .input-field input {
+  width: 100%;
+  height: 100%;
+  font-size: 0.92rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0 15px;
+}
+form .input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: #717171;
+  pointer-events: none;
+  transform: translateY(-50%);
+  /* translateY(-50%); is used to vertically translate an element by 50% of its own height in the upward direction. */
+  transition: 0.2s ease;
+}
+.input-field input:is(:focus, :valid) ~ label {
+  font-size: 0.75rem;
+  color: #00bcd4;
+  transform: translateY(-120%);
+  /* when the input field is focused ,the label undergoes following properties */
+  /* font is minimized and the position is shifted 120% of its own height along positive y axis */
+}
+.input-field input:is(:focus, :valid) {
+  padding: 16px 15px 0;
+  /* here label and input is in same div
+but when the input field is focused the input is given padding with respect
+to div and label tag
+*/
+}
+.formbox a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+.formbox a:hover {
+  text-decoration: underline;
+}
+form button {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 14px 0;
+  border-radius: 3px;
+  margin: 25px 0;
+  color: #fff;
+  background: #00d40e;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.formbox .forgot-password {
+  display: inline-flex;
+  margin-top: 14px;
+  font-size: 0.95;
+}
+*/ .formbox .button-link {
+  text-align: center;
+}
+form button:hover {
+  background: #0097a7;
+}
+@media (max-width: 760px) {
+  .popup-form {
+    width: 95%;
+  }
+  .formbox .form-detail {
+    display: none;
+  }
+  .formbox .form-content {
+    padding: 30px 20px;
+  }
+}
+.red {
+  margin: auto;
+  color: green;
+  margin-left: 44%;
+  margin-top: 400px;
+}
+.navigate .form {
+  margin-left: 100px;
+}
+
+@media (max-width: 952px) {
+  .popup-form {
+    margin-top: 180px;
+    margin-left: 0px;
+    background: #fff;
+
+    border: 2px solid #fff;
+    max-width: 720px;
+    width: 100%;
+    box-shadow: 10px 5px 10px rgba(0, 0.4, 0.4, 0.4);
+
+    pointer-events: none;
+  }
+  body {
+    background-image: url("green.jpg");
+    background-size: cover;
+    height: 60vh;
+  }
+}
+/* .two_buttons{
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* Adjust as needed */
+  /* gap: 20px; */
+
